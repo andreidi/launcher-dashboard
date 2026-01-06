@@ -1,0 +1,14 @@
+services:
+  launcher-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: launcher-dashboard:latest
+    container_name: launcher-dashboard
+    ports:
+      - "9496:80"
+    volumes:
+      - /path/to/data/folder:/etc/data:ro
+    restart: unless-stopped
+    mem_limit: 64m
+    cpus: 0.5

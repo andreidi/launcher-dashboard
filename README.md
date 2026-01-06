@@ -12,48 +12,38 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Docker
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Update `/path/to/data/folder` in [docker-compose.yml](docker-compose.yml)
 
-```bash
-ng generate component component-name
-```
+**!! Important !!**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The `/path/to/data/folder` should contain an `apps.json` file and an `icons` folder that holds all the icon files referenced in `apps.json`.
 
 ```bash
-ng generate --help
+docker compose up -d --build
 ```
 
-## Building
+### To update apps or icons:
 
-To build the project run:
+ 1. Edit `</path/to/data/folder>/apps.json`
+ 2. Add/remove icons in `</path/to/data/folder>/icons/`
+ 3. Restart container
 
 ```bash
-ng build
+docker-compose restart
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**No rebuild needed!**
 
-## Running unit tests
+`apps.json` example:
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+```json
+[
+  {
+    "name": "My App",
+    "icon": "myapp.svg",
+    "url": "my-app.local"
+  }
+]
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
