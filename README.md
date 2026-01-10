@@ -152,13 +152,18 @@ pm2 startup
 
 ### Using Docker
 
-#### Edit `docker-compose.yml` to point to your data directory:
+#### Create the `docker-compose.override.yml` file:
+```bash
+cp ./docker-compose.override.example.yml ./docker-compose.override.yml
+```
+
+#### Edit `docker-compose.override.yml` to point to your data directory:
 
 ```yaml
 services:
   launchboard:
     volumes:
-      - /path/to/your/data-folder:/etc/data:ro  # Update this path!
+      - /path/to/data/folder:/etc/data:ro # Update this path!
 ```
 
 #### Build and start:
