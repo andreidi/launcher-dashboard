@@ -12,7 +12,7 @@ RUN npm ci
 COPY . .
 
 # Build the Angular app
-RUN npm run build -- --configuration production
+RUN npm run build:prod
 
 # Production stage
 FROM nginx:alpine-slim

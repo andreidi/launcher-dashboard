@@ -1,0 +1,13 @@
+services:
+  launchboard:
+    volumes:
+      # Update this path to point to your config folder
+      - /path/to/data/folder:/etc/data:ro
+
+    # Optional: Override port if 9496 is already in use
+    # ports:
+    #   - "3000:80"
+
+    # Optional: Adjust resource limits
+    # mem_limit: 128m
+    # cpus: 1.0
