@@ -16,7 +16,7 @@ coverage
 Thumbs.db
 *.log
 .env
-docker-compose.yml
+docker-compose.*
 dockerfile
 .prettierignore
 .prettierrc
