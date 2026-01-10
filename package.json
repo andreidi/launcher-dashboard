@@ -7,21 +7,13 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "pm2:start": "npm run build:prod && pm2 start pm2.config.js",
+    "pm2:stop": "pm2 stop launchboard",
+    "pm2:restart": "pm2 restart launchboard",
+    "pm2:delete": "pm2 delete launchboard",
+    "pm2:logs": "pm2 logs launchboard"
   },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
-  },
-  "private": true,
   "packageManager": "npm@11.6.2",
   "dependencies": {
     "@angular/common": "^21.0.0",

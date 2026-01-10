@@ -2,6 +2,6 @@
   {
     "name": "Launchboard",
     "url": "http://localhost:4200",
-    "icon": "launchboard.png"
+    "icon": "example-icon.png"
   }
 ]
