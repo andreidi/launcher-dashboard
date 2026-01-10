@@ -1,4 +1,4 @@
-# launcher-dashboard - Launcherboard
+# launcher-dashboard - Launchboard
 
 A simple & lightweight app launcher for quickly accessing local network applications.
 
@@ -196,7 +196,7 @@ docker compose up -d --build
 
 ## Management
 
-#### Updating Data
+#### Updating Data:
 
 Edit `apps.json` or add/remove icons:
 
@@ -208,15 +208,8 @@ nano /path/to/your/data-folder/apps.json
 cp new-app-icon.png /path/to/your/data-folder/icons/
 ```
 
-**PM2: Just refresh your browser**
-No rebuild or restart required! Changes take effect immediately (thanks to http-server's -c-1 flag).
+#### Applying data changes:
 
-**Docker: restart container**
+**PM2:** Rebuild and start with `npm run pm2:start`
 
-## Resource Usage
-
-| Deployment | Image/Build Size | RAM Usage | CPU Usage | Startup Time |
-|------------|------------------|-----------|-----------|--------------|
-| PM2 + http-server | ~500 KB (build) | ~15 MB | Minimal | Instant |
-| Docker + nginx | ~30 MB (image) | ~20 MB | Minimal | 1-2 sec |
-
+**Docker:** Restart the container

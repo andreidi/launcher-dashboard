@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'launchboard',
       script: 'http-server',
-      args: 'dist/launcher-dashboard/browser -p 8080 -c-1 --cors -g',
+      args: 'dist/launcher-dashboard/browser -p 9496 -c-1 --cors -g',
       instances: 1,
       autorestart: true,
       watch: false,
