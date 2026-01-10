@@ -10,9 +10,9 @@ export class DashboardService {
 
   getItems(): Observable<Item[]> {
     return this.#http
-      .get<Item[]>('apps.json', {
+      .get<Item[]>('data/apps.json', {
         responseType: 'json',
       })
-      .pipe(map((items) => items.map((item) => ({ ...item, icon: `icons/${item.icon}` }))));
+      .pipe(map((items) => items.map((item) => ({ ...item, icon: `data/icons/${item.icon}` }))));
   }
 }

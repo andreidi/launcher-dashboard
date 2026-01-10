@@ -1,14 +1,17 @@
 services:
-  launcher-dashboard:
+  launchboard:
     build:
       context: .
       dockerfile: Dockerfile
     image: launcher-dashboard:latest
-    container_name: launcher-dashboard
+    container_name: launchboard
     ports:
       - "9496:80"
     volumes:
       - /path/to/data/folder:/etc/data:ro
+    labels:
+      - "com.docker.desktop.plugin.port=9496"
+      - "description=Launcher dashboard for local network web apps."
     restart: unless-stopped
     mem_limit: 64m
     cpus: 0.5
