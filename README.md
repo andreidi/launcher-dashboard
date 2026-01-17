@@ -196,20 +196,25 @@ docker compose up -d --build
 
 ## Management
 
-#### Updating Data:
+#### Updating Data using CLI:
 
-Edit `apps.json` or add/remove icons:
-
+**Edit `apps.json`:**
 ```bash
-# Edit the data
 nano /path/to/your/data-folder/apps.json
+```
 
-# Add new icon
+**Add new icon:**
+```bash
 cp new-app-icon.png /path/to/your/data-folder/icons/
+```
+
+**Use `scp` to copy on a different machine:**
+```bash
+scp new-app-icon.png user@machine-address:/path/to/your/data-folder/icons/
 ```
 
 #### Applying data changes:
 
-**PM2:** Rebuild and start with `npm run pm2:start`
+**PM2:** Copy data folder with `npm run copy-data`
 
 **Docker:** Restart the container
