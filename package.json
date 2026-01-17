@@ -9,6 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
+    "copy-data": "node copy-data.mjs",
     "pm2:start": "npm run build:prod && pm2 start pm2.config.js",
     "pm2:stop": "pm2 stop launchboard",
     "pm2:restart": "pm2 restart launchboard",
