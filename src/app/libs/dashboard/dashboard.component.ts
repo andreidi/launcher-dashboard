@@ -18,6 +18,6 @@ export class DashboardComponent {
   items = toSignal(this.#service.getItems());
 
   open(url: string) {
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
   }
 }
