@@ -2,6 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  user-select: none;
 
   .icon {
     border-radius: 25%;
@@ -17,6 +18,14 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     width: 5.5rem;
+
+    /* Image fallback styles start */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fefefe;
+    font-weight: 600;
+    /* Image fallback styles end */
 
     img {
       width: 100%;

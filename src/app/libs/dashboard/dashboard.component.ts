@@ -17,7 +17,11 @@ export class DashboardComponent {
 
   items = toSignal(this.#service.getItems());
 
-  open(url: string) {
-    window.open(url, '_blank', 'noopener,noreferrer');
+  open(url: string, event: MouseEvent) {
+    if (event.ctrlKey || event.metaKey) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+      window.open(url, '_self', 'noopener,noreferrer');
+    }
   }
 }

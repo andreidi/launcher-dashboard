@@ -1,5 +1,5 @@
 <div class="icon">
-  <img [src]="data().icon" [alt]="data().name" />
+  <img [src]="data().icon" [alt]="data().name" [appImgFallback]="data().name" />
 </div>
 
 <div class="name">{{ data().name }}</div>
