@@ -16,12 +16,4 @@ export class DashboardComponent {
   #service = inject(DashboardService);
 
   items = toSignal(this.#service.getItems());
-
-  open(url: string, event: MouseEvent) {
-    if (event.ctrlKey || event.metaKey) {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    } else {
-      window.open(url, '_self', 'noopener,noreferrer');
-    }
-  }
 }

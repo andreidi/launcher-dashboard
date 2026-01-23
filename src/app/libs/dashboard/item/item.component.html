@@ -1,5 +1,7 @@
-<div class="icon">
-  <img [src]="data().icon" [alt]="data().name" [appImgFallback]="data().name" />
-</div>
+<a [href]="data().url" rel="noopener noreferrer">
+  <div class="icon">
+    <img [src]="data().icon" [alt]="data().name" [appImgFallback]="data().name" />
+  </div>
 
-<div class="name">{{ data().name }}</div>
+  <div class="name">{{ data().name }}</div>
+</a>
